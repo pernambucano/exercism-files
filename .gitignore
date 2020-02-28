@@ -1,0 +1,11 @@
+
+# Created by https://www.gitignore.io/api/node,python,exercism,virtualenv
+# Edit at https://www.gitignore.io/?templates=node,python,exercism,virtualenv
+
+### Exercism ###
+# gitignore template for Exercism project
+# website: https://exercism.io/
+
+# Ignore .exercism folder which contain sensitive data
+.exercism
+
