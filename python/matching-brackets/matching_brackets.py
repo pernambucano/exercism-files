@@ -1,12 +1,12 @@
 def is_paired(input_string):
-    symbol_list = []
+    stack = []
     for char in input_string:
         if char in ["{", "[", "("]:
-            symbol_list.append(char)
+            stack.append(char)
         if char in ["}", "]", ")"]:
-            if len(symbol_list) == 0:
+            if len(stack) == 0:
                 return False
-            last_item = symbol_list.pop()
+            last_item = stack.pop()
             if char == "}" and last_item == "{":
                 continue
             if char == ")" and last_item == "(":
@@ -15,7 +15,5 @@ def is_paired(input_string):
                 continue
             else:
                 return False
-    if len(symbol_list) > 0:
-        return False
-    return True
+    return not stack
 
